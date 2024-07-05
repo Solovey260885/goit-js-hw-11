@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     
     <title>HW-11</title>
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-0b16fe67.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8c59ed88.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-efdd59f4.css">
   </head>
   <body>
-    <h1>Hello-JS-HW-11</h1>
+    <form class="search-form">
+      <input type="text" class="form-control" name="query" />
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <span class="loader"></span>
+
+    <div class="card-container"></div>
+
     
   </body>
 </html>
