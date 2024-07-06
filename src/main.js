@@ -15,7 +15,7 @@ searchForm.addEventListener('submit', handleSearch);
 function handleSearch(event) {
   event.preventDefault();
   const form = event.currentTarget;
-  const queryValue = form.elements.query.value;
+  const queryValue = form.elements.query.value.trim();
 
   if (queryValue === '') {
     iziToast.warning({
