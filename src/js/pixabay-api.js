@@ -23,12 +23,12 @@ export function getPicturesByQuery(query) {
     return res.json();
   });
 }
-hideSpinner();
+
 export function onFetchError(error) {
   iziToast.error({
     title: 'Error',
     message:
       'Sorry, there are no images matching your search query. Please try again!',
-    position: 'topCenter',
+    position: 'topRight',
   });
 }

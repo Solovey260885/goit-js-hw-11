@@ -21,7 +21,7 @@ function handleSearch(event) {
     iziToast.warning({
       title: 'Caution',
       message: 'Please, enter in the photo',
-      position: 'topCenter',
+      position: 'topRight',
     });
   } else {
     getPicturesByQuery(queryValue)
@@ -31,7 +31,7 @@ function handleSearch(event) {
             title: 'Caution',
             message:
               'Sorry, there are no images matching your search query. Please try again!',
-            position: 'topCenter',
+            position: 'topRight',
           });
         }
         renderImgCard(data.hits);

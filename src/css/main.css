@@ -1,4 +1,9 @@
 /* Reset styles */
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -31,7 +36,6 @@ button {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 li {
@@ -40,8 +44,77 @@ li {
   padding: 0;
 }
 
+/* form */
+
+.search-form {
+  width: 400px;
+  margin: 36px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.input {
+  width: 272px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+
+  padding-left: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.input:hover {
+  border: 1px solid #000;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+
+  background: #4e75ff;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #6c8cff;
+}
+
+/* markup */
+
 .card-container {
-  width: 1128px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -50,14 +123,48 @@ li {
   margin: 0 auto;
   padding: 0;
 }
-.gallery-image {
+.gallery-item {
   width: 360px;
+  border: 1px solid #808080;
+
   transition: transform 0.3s;
 }
-.gallery-image:hover {
+.gallery-item:hover {
   transform: scale(1.04);
 }
 
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-text-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery-text-item {
+  text-align: center;
+  margin: 4px 0;
+}
+
+.gallery-text-item > h3 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.gallery-text-item > p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
 /* spinner */
 
 .loader {
@@ -68,7 +175,7 @@ li {
   border: 3px dotted #fff;
   border-style: solid solid dotted dotted;
   border-radius: 50%;
-  display: inline-block;
+  display: none;
   position: relative;
   box-sizing: border-box;
   animation: rotation 2s linear infinite;
